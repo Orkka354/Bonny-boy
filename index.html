@@ -7,7 +7,7 @@
 <main>
 <body>
 	<p class="red-text">
-	Honestly I got something working is pretty 
+	Code Quakers
 	</p>
 	<!--<p>
 	hmmmmmmlkjl;akdjfl
@@ -19,32 +19,69 @@
 	
 	
 		<img src="OscarDuck.png" alt="alt_text" class ="ODuck"/>
-		<img src="KolbyDuck.png" alt="alt_text" class ="smaller-ducks"/>
+		<img src="KolbyDuck.png" alt="alt_text" class ="CDuck"/>
 		<a href="http://3.17.36.155/duck/SageBio.html"><img src="SageDuck.png" alt="alt_text" class ="SDuck"/></a>
 		
 	</p>
+	
 	<style>
 		.red-text{
-			color: red;
-			text-align: center;
-			font: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif"
+			color: white;
+			text-align:center;
+			padding-top: 500px;
+			font-size: 200px;
 			
 		}
 		body {
 			background-image: url(BubbleBackground.png);
 			background-repeat: no-repeat;
 		}
-		.smaller-ducks {
-			width: 600px;
-			position: absolute;
-			top: 80px;
-			right: 650px;
-			
-			
+		
+		
+		.SDuck:hover{
+			animation-name: changenowS;
+			animation-duration: 500ms;
+			animation-fill-mode: forwards;
 			
  		 	
   			
 		}
+		.ODuck:hover{
+			animation-name: changenowO;
+			animation-duration: 500ms;
+			animation-fill-mode: forwards;
+			
+ 		 	
+  			
+		}
+		.CDuck:hover{
+			animation-name: changenowC;
+			animation-duration: 500ms;
+			animation-fill-mode: forwards;
+			
+ 		 	
+  			
+		}
+		@keyframes changenowO{
+			100%{
+				filter:hue-rotate(180deg);
+				filter: blur(20px);
+			}
+		}
+		@keyframes changenowS{
+			100%{
+				filter: invert(100%)
+				
+			}
+		}
+		@keyframes changenowC{
+			100%{
+				filter: grayscale(100%)
+			}
+		}
+ 		
+  			
+		
 		.ODuck{
 			width: 600px;
 			position: absolute;
@@ -59,6 +96,14 @@
 				
 		}
 		
+		.CDuck {
+			width: 600px;
+			position: absolute;
+			top: 80px;
+			right: 650px;
+			
+			
+			}
 	
 	</style>
 </body>
