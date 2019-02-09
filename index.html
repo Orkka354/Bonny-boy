@@ -21,6 +21,8 @@
 		<img src="OscarDuck.png" alt="alt_text" class ="ODuck"/>
 		<img src="KolbyDuck.png" alt="alt_text" class ="CDuck"/>
 		<a href="http://3.17.36.155/duck/SageBio.html"><img src="SageDuck.png" alt="alt_text" class ="SDuck"/></a>
+		<img src ="adcuk.png" alt="well hes gone now" class ="flyingduck"/>
+			<img src ="adcuk.png" alt="well hes gone now" class ="flyingduck2"/>
 		
 	</p>
 	
@@ -31,12 +33,35 @@
 			padding-top: 500px;
 			font-size: 200px;
 			
+			
 		}
 		body {
 			background-image: url(BubbleBackground.png);
 			background-repeat: no-repeat;
 		}
 		
+		.flyingduck{
+			height: 30px;
+			widows: 30px;
+			position:absolute;
+			animation: movingduck;
+			
+			animation-duration: 30s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			
+		}
+		.flyingduck2{
+			height: 30px;
+			widows: 30px;
+			position:absolute;
+			animation: movingduck;
+			animation-delay: 1s;
+			animation-duration: 30s;
+			animation-iteration-count: infinite;
+			animation-timing-function: cubic-bezier(0.5, 0.15, 0.40, 0.90);
+			
+		}
 		
 		.SDuck:hover{
 			animation-name: changenowS;
@@ -79,18 +104,110 @@
 				filter: grayscale(100%)
 			}
 		}
- 		
+		@keyframes movingduck{
+			0%{
+				top: 0px;
+				right: 0px;
+			}
+			10%{
+				top: 50px;
+				right: 200px;
+			}
+			20%{
+				top: 0px;
+				right: 400px;
+			}
+			30%{
+				top: 50px;
+				right: 600px;
+			}
+			40%{
+				top: 0px;
+				right: 800px;
+			}
+			50%{
+				top: 50px;
+				right: 1000px;
+			}
+			60%{
+				top: 0px;
+				right: 1200px;
+			}
+			70%{
+				top: 50px;
+				right: 1400px;
+			}
+			80%{
+				top: 0px;
+				right: 1600px;
+			}
+			90%{
+				top: 50px;
+				right: 1800px;
+			}
+			100%{
+				top: 0px;
+				right: 2000px;
+			}
+		}
+ 		@keyframes movingduck2{
+			0%{
+				top: 50px;
+				right: 0px;
+			}
+			10%{
+				top: 0px;
+				right: 180px;
+			}
+			20%{
+				top: 50px;
+				right: 380px;
+			}
+			30%{
+				top: 0px;
+				right: 580px;
+			}
+			40%{
+				top: 50px;
+				right: 780px;
+			}
+			50%{
+				top: 0px;
+				right: 980px;
+			}
+			60%{
+				top: 50px;
+				right: 1180px;
+			}
+			70%{
+				top: 0px;
+				right: 1380px;
+			}
+			80%{
+				top: 50px;
+				right: 1580px;
+			}
+			90%{
+				top: 0px;
+				right: 1780px;
+			}
+			100%{
+				top: 50px;
+				right: 2000px;
+			}
+		}
   			
 		
 		.ODuck{
 			width: 600px;
-			position: absolute;
+			position:absolute;
 			top: 80px;
+			left: 10px;
 			
 		}
 		.SDuck{
 			width: 600px;
-			position: absolute;
+			position:absolute;
 			top: 80px;
 			right: 30px;
 				
@@ -98,7 +215,7 @@
 		
 		.CDuck {
 			width: 600px;
-			position: absolute;
+			position:absolute;
 			top: 80px;
 			right: 650px;
 			
