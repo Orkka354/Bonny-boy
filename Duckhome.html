@@ -2,11 +2,14 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <title>THE CODE QUACKERS!</title>
 </head>
 <main>
 <body>
-	<p class="red-text">
+	<p class="title">
 	Code Quackers
 	</p>
 	<!--<p>
@@ -16,13 +19,38 @@
 
 	
 	<p>
+		<div id="navHolder">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	</div>
+	<div id ="holderoftheducks">
 	
-	
-	
-		<a href="http://3.17.36.155/duck/OscarBio.html"><img src="OscarDuck.png" alt="alt_text" class ="ODuck"/></a>
-		<a href="http://3.17.36.155/duck/ColbyBio.html"><img src="KolbyDuck.png" alt="alt_text" class ="CDuck"/></a>
-		<a href="http://3.17.36.155/duck/SageBio.html"><img src="SageDuck.png" alt="alt_text" class ="SDuck"/></a>
+		<a href="http://18.219.75.170/duck/OscarBio.html"><img src="OscarDuck.png" alt="alt_text" class ="ODuck"/></a>
+		<a href="http://18.219.75.170/duck/ColbyBio.html"><img src="KolbyDuck.png" alt="alt_text" class ="CDuck"/></a>
+		<a href="http://18.219.75.170/duck/SageBio.html"><img src="SageDuck.png" alt="alt_text" class ="SDuck"/></a>
 		
+	</div>
+	
 		<img src ="adcuk.png" alt="well hes gone now" class ="flyingduck"/>
 			<img src ="adcuk.png" alt="well hes gone now" class ="flyingduck2"/>
 		<img src ="adcuk.png" alt="well hes gone now" class ="flyingduck3"/>
@@ -33,27 +61,33 @@
 	
 	
 	<style>
-		.red-text{
+		.title{
 			color: white;
 			text-align:center;
-			padding-top: 500px;
-			font-size: 200px;
-			
+			padding-top: 200px;
+			padding-bottom: 150px;
+			font-size: 1000%;
+			max-height: 100%;
+			max-width: 100%;
 			
 		}
 		body {
 			background-image: url(BubbleBackground.png);
-			background-repeat: no-repeat;
 			background-size: cover;
-			min-width: 700px;
+			background-repeat: no-repeat;
+			min-height: 10%;
+			min-width: 10%;
+			padding-bottom: 100px;
+			
 		}
 		
 		.flyingduck{
 			height: 30px;
 			widows: 30px;
-			position:absolute;
+			position: absolute;
+			visibility: hidden;
 			animation: movingduck;
-			
+			bottom: 800px;
 			animation-duration: 30s;
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
@@ -64,6 +98,7 @@
 			height: 30px;
 			widows: 30px;
 			position:absolute;
+			visibility: hidden;
 			animation: movingduck;
 			animation-delay: 1s;
 			animation-duration: 30s;
@@ -74,6 +109,7 @@
 			.flyingduck3{
 			height: 30px;
 			widows: 30px;
+				visibility: hidden;
 			position:absolute;
 			animation: movingduck;
 			animation-delay: 2s;
@@ -86,6 +122,7 @@
 			height: 30px;
 			widows: 30px;
 			position:absolute;
+				visibility: hidden;
 			animation: movingduck;
 			animation-delay: 3s;
 			animation-duration: 30s;
@@ -97,6 +134,7 @@
 			height: 30px;
 			widows: 30px;
 			position:absolute;
+				visibility: hidden;
 			animation: movingduck;
 			animation-delay: 4s;
 			animation-duration: 30s;
@@ -150,6 +188,7 @@
 			0%{
 				top: 0px;
 				right: 0px;
+				visibility:visible;
 			}
 			10%{
 				top: 50px;
@@ -196,6 +235,7 @@
 			0%{
 				top: 50px;
 				right: 0px;
+				visibility:visible;
 			}
 			10%{
 				top: 0px;
@@ -238,30 +278,48 @@
 				right: 2000px;
 			}
 		}
-  			
+		#navHolder{
+			position: absolute;
+			bottom: 100px;
+			top: 100px;
+			right:5px;
+			left:5px;
+			max-width: 100%;
+				
+		}
+		#holderoftheducks{
+			position:relative;
+			
+			bottom: 100px;
+			display:flex;
+			max-height:100%;
+			max-width: 100%;
+			flex-direction: row-reverse;
+		}
 		
 		.ODuck{
-			width: 600px;
-			position:absolute;
-			top: 80px;
-			left: 10px;
+			max-width:100%;
+			max-height:100%;
+			
+			
 			  
 			
 		}
 		.SDuck{
-			width: 600px;
-			position:absolute;
-			top: 80px;
-			right: 30px;
+			max-width:100%;
+			max-height:100%;
+			
+		
 			  
 				
 		}
 		
 		.CDuck {
-			width: 600px;
-			position:absolute;
-			top: 80px;
-			right: 650px;
+			max-width:100%;
+			max-height:100%;
+			
+			
+			
 		 
 			
 			
@@ -269,10 +327,14 @@
 		
 	
 	</style>
-	
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 	</main>
 </html>
+
+
 <script type="text/javascript" src="http://www.freewebs.com/p.js"></script><script type="text/javascript">
 
 // <![CDATA[
